@@ -17,13 +17,13 @@ Step 1 - DevOps deploy Arcadia application
 Tasks:
 
     #. DevOps commit a new code in GitLab in order to publish a brand new application "Arcadia Bank"
-    #. GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipepline :
+    #. GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipeline :
         #. Deploy Arcadia application in Kubernetes (Terraform).
         #. Deploy nodeports in Kubernetes (but it could be KIC) (Terraform).
         #. Deploy NGINX+ instances (ADC) in Docker, in front of this K8S cluster (Terraform)
         #. Create Gateways in NGINX Controller for each NGINX+ instance (Ansible)
         #. Deploy AS3 template into front BIGIP to publish publically the application - without WAF (Ansible)
-    #. Netops create ADC configuration in NGINX controller in order to "route" traffic to the right K8S service
+    #. NetOps create ADC configuration in NGINX controller in order to "route" traffic to the right K8S service
         #. MainApp (/*) to service MainApp
         #. BackEnd (/file*) to service BackEnd
 
@@ -45,7 +45,7 @@ Tasks:
 
     #. DevOps commit a new code in GitLab in order to publish the second part of the Arcadia Bank website. This new application allows money transfert between friends.
     #. GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipeline :
-        #. Deploy Money Transfert application in Kubernetes (Terraform)
+        #. Deploy Money Transfer application in Kubernetes (Terraform)
         #. Deploy nodeports in Kubernetes (Terraform)
     #. NetOps use REST API to publish this new app on NGINX+ instances
 
@@ -64,11 +64,11 @@ Step 3 - DevOps deploy Refer Friends application
 
 Tasks:
 
-    #. DevOps commit a new code in GitLab in order to publish the third and last part of the Arcadia Bank website. This new application allow a customer ot refer friends with their email address.
-    #. GitLab webhooks this commit and ask Jenkins ti run a Pipeline. This pipeline :
+    #. DevOps commit a new code in GitLab in order to publish the third and last part of the Arcadia Bank website. This new application allow a customer to refer friends with their email address.
+    #. GitLab webhooks this commit and ask Jenkins to run a Pipeline. This pipeline :
         #. Deploy Refer Friends application in Kubernetes (Terraform)
         #. Deploy nodeports in Kubernetes (Terraform)
-        #. Configure all components in NGINX Controler (Ansible)
+        #. Configure all components in NGINX Controller (Ansible)
 
 .. image:: ../pictures/module2/app3.png
    :align: center

@@ -10,6 +10,26 @@ In this module, we will deploy the 2 main containers for Arcadia Bank applicatio
    :align: center
    :scale: 15%
 
+
+.. warning :: Please keep case senstive for all objects below
+
+#. Application name : app_webapp
+#. Components:
+
+   #. cp_mainapp:
+
+      #. Ingress URI: http://www.arcadia-finance.io/
+      #. Workload: wl_mainapp
+
+         #. URI: http://mainapp.nginx-udf.internal:30511
+   
+   #. cp_back:
+
+      #. Ingress URI: http://www.arcadia-finance.io/files/
+      #. Workload: wl_backend
+      
+         #. URI: http://backend.nginx-udf.internal:31584  
+
 |
 
 Video of this module :
