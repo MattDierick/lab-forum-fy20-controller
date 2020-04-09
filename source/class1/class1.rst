@@ -1,5 +1,5 @@
-Intro - Understand the infrastructure in place
-##############################################
+Intro - Understand the infrastructure and the workflow
+######################################################
 
 Welcome into the Forum FY20 breakout demo for "Publish and Protect Modern Applications".
 
