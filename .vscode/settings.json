@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/Users/dierick/F5_Networks/virtualenv/mySphinx/bin/activate",
+    "python.pythonPath": "/usr/bin/python",
     "restructuredtext.confPath": "${workspaceFolder}/source"
 }

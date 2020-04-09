@@ -1,28 +1,24 @@
-****************************************************************
-Class 1 - API Security and Managment with NGINX and F5 solutions
-****************************************************************
+Intro - Understand the infrastructure in place
+##############################################
 
-Welcome into the API Security and Managment with NGINX and F5 solutions lab.
+Welcome into the Forum FY20 breakout demo for "Publish and Protect Modern Applications".
 
-.. warning :: For any remark or mistake in this lab, please send ASAP a Teams chat to Matthieu DIERICK, Graham ALDERSON and Kevin REYNOLDS so that we can fix it for the next sessions.
+.. warning :: For any remark or mistake in this lab, please send ASAP a Teams chat to Matthieu DIERICK.
 
-**First of all, register in the UDF Course "ISC FY20 - API Security and Mgmt"**
+**First of all, download the PowerPoint deck and understand the workflow of this demo.**
 
-Click on **Courses** in the left hand navigation. From there, click on the **Upcoming Sessions** tab in the Courses interface
+This section convers the concept and the goal of the breakout.
 
-.. image:: ./pictures/UDF-course-1.png
-   :scale: 60%
+Audiance:
+   - DevOps
+   - Netops
 
+Goal:
+   - Demonstrate Nginx and BIG-IP are part of application lifecyle
+   - Demonstrate Nginx and BIG-IP are fully integrated with CI/CD pipeline
+   - Demonstrate the new Controller 3.x capability and automation tool set
+   - Demonstrate Declarative WAF
 
-Search for **ISC FY20 - API Security and Mgmt**, click **details**, then **Schedule** and find your session. Please **join** for the **Location Room** you are affected.
-
-.. image:: ./pictures/UDF-course-2.png
-   :scale: 60%
-
-.. image:: ./pictures/UDF-course-3.png
-   :scale: 30%
-
-Click **Launch Session**
 
 .. toctree::
    :maxdepth: 1

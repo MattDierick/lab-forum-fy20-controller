@@ -15,13 +15,13 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import f5_sphinx_theme
+
 
 # -- Project information -----------------------------------------------------
 
-project = u'API Mgmt and Security'
-copyright = u'2019, WW SSA'
-author = u'WW SSA'
+project = u'Forum FY20 Nginx Controller'
+copyright = u'2020, Matthieu DIERICK'
+author = u'Matthieu DIERICK'
 
 # The short X.Y version
 version = u''
@@ -74,8 +74,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'f5_sphinx_theme'
-#html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
+#html_theme = 'alabaster'
 html_theme = "sphinx_rtd_theme"
 html_theme_path = ["_themes", ]
 
@@ -99,12 +98,12 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-#html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html']}
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'APIsecurityandmgmtdoc'
+htmlhelp_basename = 'ForumFY20NginxControllerdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -131,8 +130,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'APIsecurityandmgmt.tex', u'API Mgmt and Security Lab',
-     u'WW SSA', 'manual'),
+    (master_doc, 'ForumFY20NginxController.tex', u'Forum FY20 Nginx Controller Documentation',
+     u'Matthieu DIERICK', 'manual'),
 ]
 
 
@@ -141,7 +140,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'apisecurityandmgmt', u'AAPI Mgmt and Security Lab',
+    (master_doc, 'forumfy20nginxcontroller', u'Forum FY20 Nginx Controller Documentation',
      [author], 1)
 ]
 
@@ -152,8 +151,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'APIsecurityandmgmt', u'API Mgmt and Security Lab',
-     author, 'APIsecurityandmgmt', 'One line description of project.',
+    (master_doc, 'ForumFY20NginxController', u'Forum FY20 Nginx Controller Documentation',
+     author, 'ForumFY20NginxController', 'One line description of project.',
      'Miscellaneous'),
 ]
 

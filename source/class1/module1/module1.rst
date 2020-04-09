@@ -1,10 +1,97 @@
-Module 1 - Reviewing the Arcadia application
---------------------------------------------
+Workflow of the demo
+####################
 
-In this module, we will focus on the **Arcadia application**
-in **Kubernetes** cluster
+The demo is splitted into 4 steps :
+    - Deploy and publish Arcadia Main App
+    - Deploy and publish Money Transfer App
+    - Deploy and publish Refer Friend App
+    - Add WAF policy
 
-We will do the following labs:
+The diagram below explains the application routes.
+
+.. image:: ../pictures/module1/arcadia-routes.png
+   :align: center
+   :scale: 20%
+
+
+Step 1 - DevOps deploy Arcadia application
+******************************************
+
+.. note :: Goal is to demonstrate the GUI in the NGINX Controller. NetOps will configure the services (MainApp and BackEnd) manually.
+
+Tasks:
+
+    #. DevOps commit a new code in GitLab in order to publish a brand new application "Arcadia Bank"
+    #. GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipepline :
+        #. Deploy Arcadia application in Kubernetes (Terraform).
+        #. Deploy nodeports in Kubernetes (but it could be KIC) (Terraform).
+        #. Deploy NGINX+ instances (ADC) in Docker, in front of this K8S cluster (Terraform)
+        #. Create Gateways in NGINX Controller for each NGINX+ instance (Ansible)
+        #. Deploy AS3 template into front BIGIP to publish publically the application - without WAF (Ansible)
+    #. Netops create ADC configuration in NGINX controller in order to "route" traffic to the right K8S service
+        #. MainApp (/*) to service MainApp
+        #. BackEnd (/file*) to service BackEnd
+
+
+.. image:: ../pictures/module1/MainApp.png
+   :align: center
+   :scale: 20%
+
+.. warning :: At this stage, the first part of the application is published and can be accessed and demonstrated. We can Money Transfert is not yet there, same for Refer Friends.
+
+
+
+
+Step 2 - DevOps deploy Money Transfer application
+*************************************************
+
+.. note :: Goal is to demonstrate NGINX Controller has a REST API to configure objects. NetOps will configure the service (Money Transfert) via REST API.
+
+Tasks:
+
+    #. DevOps commit a new code in GitLab in order to publish the second part of the Arcadia Bank website. This new application allows money transfert between friends.
+    #. GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipeline :
+        #. Deploy Money Transfert application in Kubernetes (Terraform)
+        #. Deploy nodeports in Kubernetes (Terraform)
+    #. NetOps use REST API to publish this new app on NGINX+ instances
+
+.. image:: ../pictures/module1/app2.png
+   :align: center
+   :scale: 20%
+
+.. warning :: At this stage, the Money Transfert application is published and can be accessed and demonstrated
+
+
+Step 3 - DevOps deploy Refer Friends application
+************************************************
+
+.. note :: Goal is to demonstrate NGINX Controller can be part of the Application lifecycle and CICD. NetOps don't configure anything.
+
+Tasks:
+
+    #. DevOps commit a new code in GitLab in order to publish the third and last part of the Arcadia Bank website. This new application allow a customer ot refer friends with their email address.
+    #. GitLab webhooks this commit and ask Jenkins ti run a Pipeline. This pipeline :
+        #. Deploy Refer Friends application in Kubernetes (Terraform)
+        #. Deploy nodeports in Kubernetes (Terraform)
+        #. Configure all components in NGINX Controler (Ansible)
+
+.. image:: ../pictures/module1/app3.png
+   :align: center
+   :scale: 20%
+
+.. warning :: At this stage, the Refer Friends application is published and can be accessed and demonstrated. The Arcadia Bank website is finished, but not yet secured.
+
+Step 4 - NetOps/SecOps publish WAF policy to protect Arcadia application
+************************************************************************
+
+.. note :: Goal is to demonstrate BIG-IP Advanced WAF has a Declrarative API interface to push WAF policies.
+
+Task:
+
+    #. NetOps run a Jenkins pipelin that will push a new AS3 declaration with a WAF policy built by Secops
+
+.. warning :: At this stage, the Arcadia Bank website is published and secured.
+
 
 .. toctree::
    :maxdepth: 1

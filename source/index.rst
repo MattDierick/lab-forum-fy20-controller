@@ -3,12 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to API Management and Security Lab
-==========================================
+Welcome to FY20 EMEA Forum breakout session
+###########################################
 
-.. warning :: For any remark or mistake in this lab, please send ASAP a Teams chat to Matthieu DIERICK, Graham ALDERSON and Kevin REYNOLDS so that we can fix it for the next sessions.
+Publish and protect modern applications
+***************************************
 
-.. note :: Contributors : CJ CHEN, David ARTHUR, Shahnawaz BACKER, Sudarshan SIVAPERUMAL, Philippe CLOUP
+.. warning :: For any remark or mistake in this lab, please send ASAP a Teams chat to Matthieu DIERICK.
+
+.. note :: Contributors : Philippe Cloup, Nicolas Ménant, Fouad Chmainy
 
 .. toctree::
    :maxdepth: 2
