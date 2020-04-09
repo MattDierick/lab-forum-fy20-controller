@@ -3,7 +3,7 @@ Intro - Understand the infrastructure and the workflow
 
 Welcome into the Forum FY20 breakout demo "Publish and Protect Modern Applications".
 
-.. warning :: For any remark or mistake in this lab, please send ASAP a Teams chat to Matthieu DIERICK.
+.. warning :: For any remark or mistake in this lab, please send a Teams chat to Matthieu DIERICK.
 
 **First of all, have a look on the PowerPoint deck.**
 

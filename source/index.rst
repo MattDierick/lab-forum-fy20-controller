@@ -9,7 +9,7 @@ Welcome to FY20 EMEA Forum breakout session
 Publish and protect modern applications
 ***************************************
 
-.. warning :: For any remark or mistake in this lab, please send ASAP a Teams chat to Matthieu DIERICK.
+.. warning :: For any remark or mistake in this lab, please send a Teams chat to Matthieu DIERICK.
 
 .. note :: Contributors : Philippe Cloup, Nicolas Ménant, Fouad Chmainy
 
