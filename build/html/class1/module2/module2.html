@@ -165,12 +165,12 @@
   <div class="section" id="workflow-of-the-demo">
 <h1>Workflow of the demo<a class="headerlink" href="#workflow-of-the-demo" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
-<dt>The demo is splitted into 4 steps :</dt>
+<dt>The demo is splitted in 4 steps :</dt>
 <dd><ul class="first last simple">
 <li>Deploy and publish Arcadia Main App</li>
 <li>Deploy and publish Money Transfer App</li>
-<li>Deploy and publish Refer Friend App</li>
-<li>Add WAF policy</li>
+<li>Deploy and publish Refer Friends App</li>
+<li>Apply WAF policy</li>
 </ul>
 </dd>
 </dl>
@@ -181,14 +181,14 @@
 <h2>Step 1 - DevOps deploy Arcadia application<a class="headerlink" href="#step-1-devops-deploy-arcadia-application" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Goal is to demonstrate the GUI in the NGINX Controller. NetOps will configure the services (MainApp and BackEnd) manually.</p>
+<p class="last">Goal is to use the GUI in the NGINX Controller for our traditional customers. NetOps will configure the services (MainApp and BackEnd) manually.</p>
 </div>
 <p>Tasks:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li>DevOps commit a new code in GitLab in order to publish a brand new application “Arcadia Bank”</li>
 <li><dl class="first docutils">
-<dt>GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipepline :</dt>
+<dt>GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipeline:</dt>
 <dd><ol class="first last arabic">
 <li>Deploy Arcadia application in Kubernetes (Terraform).</li>
 <li>Deploy nodeports in Kubernetes (but it could be KIC) (Terraform).</li>
@@ -200,7 +200,7 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Netops create ADC configuration in NGINX controller in order to “route” traffic to the right K8S service</dt>
+<dt>NetOps create ADC configuration in NGINX controller in order to “route” traffic to the right K8S service</dt>
 <dd><ol class="first last arabic">
 <li>MainApp (/<a href="#id1"><span class="problematic" id="id2">*</span></a>) to service MainApp</li>
 <li>BackEnd (/file*) to service BackEnd</li>
@@ -213,7 +213,7 @@
 <a class="reference internal image-reference" href="../../_images/MainApp.png"><img alt="../../_images/MainApp.png" class="align-center" src="../../_images/MainApp.png" style="width: 761.6px; height: 373.6px;" /></a>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">At this stage, the first part of the application is published and can be accessed and demonstrated. We can Money Transfert is not yet there, same for Refer Friends.</p>
+<p class="last">At this stage, the first part of the application is published and can be accessed and demonstrated. We can see Money Transfert application is not yet there, same for Refer Friends.</p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -223,16 +223,16 @@
 <h2>Step 2 - DevOps deploy Money Transfer application<a class="headerlink" href="#step-2-devops-deploy-money-transfer-application" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Goal is to demonstrate NGINX Controller has a REST API to configure objects. NetOps will configure the service (Money Transfert) via REST API.</p>
+<p class="last">Goal is to demonstrate NGINX Controller has a REST API to configure objects. NetOps will configure the service (Money Transfer) via REST API.</p>
 </div>
 <p>Tasks:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>DevOps commit a new code in GitLab in order to publish the second part of the Arcadia Bank website. This new application allows money transfert between friends.</li>
+<li>DevOps commit a new code in GitLab in order to publish the second part of the Arcadia Bank website. This new application allows money transfer between friends.</li>
 <li><dl class="first docutils">
-<dt>GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipeline :</dt>
+<dt>GitLab webhooks this commit and ask Jenkins to run a pipeline. This pipeline:</dt>
 <dd><ol class="first last arabic">
-<li>Deploy Money Transfert application in Kubernetes (Terraform)</li>
+<li>Deploy Money Transfer application in Kubernetes (Terraform)</li>
 <li>Deploy nodeports in Kubernetes (Terraform)</li>
 </ol>
 </dd>
@@ -244,7 +244,7 @@
 <a class="reference internal image-reference" href="../../_images/app2.png"><img alt="../../_images/app2.png" class="align-center" src="../../_images/app2.png" style="width: 761.2px; height: 374.8px;" /></a>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">At this stage, the Money Transfert application is published and can be accessed and demonstrated</p>
+<p class="last">At this stage, the Money Transfer application is published and can be accessed and demonstrated</p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -254,18 +254,18 @@
 <h2>Step 3 - DevOps deploy Refer Friends application<a class="headerlink" href="#step-3-devops-deploy-refer-friends-application" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Goal is to demonstrate NGINX Controller can be part of the Application lifecycle and CICD. NetOps don’t configure anything.</p>
+<p class="last">Goal is to demonstrate NGINX Controller can be part of the application lifecycle and CICD. NetOps don’t configure anything.</p>
 </div>
 <p>Tasks:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>DevOps commit a new code in GitLab in order to publish the third and last part of the Arcadia Bank website. This new application allow a customer ot refer friends with their email address.</li>
+<li>DevOps commit a new code in GitLab in order to publish the third and last part of the Arcadia Bank website. This new application allow a customer to refer friends with their email address.</li>
 <li><dl class="first docutils">
-<dt>GitLab webhooks this commit and ask Jenkins ti run a Pipeline. This pipeline :</dt>
+<dt>GitLab webhooks this commit and ask Jenkins to run a Pipeline. This pipeline:</dt>
 <dd><ol class="first last arabic">
 <li>Deploy Refer Friends application in Kubernetes (Terraform)</li>
 <li>Deploy nodeports in Kubernetes (Terraform)</li>
-<li>Configure all components in NGINX Controler (Ansible)</li>
+<li>Configure all components in NGINX Controller (Ansible)</li>
 </ol>
 </dd>
 </dl>
@@ -290,7 +290,7 @@
 <p>Task:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>NetOps run a Jenkins pipelin that will push a new AS3 declaration with a WAF policy built by Secops</li>
+<li>NetOps run a Jenkins pipeline that will push a new AS3 declaration with a WAF policy built by Secops</li>
 </ol>
 </div></blockquote>
 <div class="admonition warning">

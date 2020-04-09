@@ -166,6 +166,32 @@
 <p class="last">At the end of this module, Arcadia Bank application will look like this.</p>
 </div>
 <a class="reference internal image-reference" href="../../_images/MainApp1.png"><img alt="../../_images/MainApp1.png" class="align-center" src="../../_images/MainApp1.png" style="width: 571.2px; height: 280.2px;" /></a>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Please keep case senstive for all objects below</p>
+</div>
+<ol class="arabic simple">
+<li>Application name : app_webapp</li>
+<li>Components:<ol class="arabic">
+<li>cp_mainapp:<ol class="arabic">
+<li>Ingress URI: <a class="reference external" href="http://www.arcadia-finance.io/">http://www.arcadia-finance.io/</a></li>
+<li>Workload: wl_mainapp<ol class="arabic">
+<li>URI: <a class="reference external" href="http://mainapp.nginx-udf.internal:30511">http://mainapp.nginx-udf.internal:30511</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>cp_back:<ol class="arabic">
+<li>Ingress URI: <a class="reference external" href="http://www.arcadia-finance.io/files/">http://www.arcadia-finance.io/files/</a></li>
+<li>Workload: wl_backend<ol class="arabic">
+<li>URI: <a class="reference external" href="http://backend.nginx-udf.internal:31584">http://backend.nginx-udf.internal:31584</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
