@@ -7,12 +7,23 @@ The demo is splitted into 4 steps :
     - Deploy and publish Refer Friend App
     - Add WAF policy
 
+|
+
+.. raw :: html
+
+    <div style="text-align: center; margin-bottom: 2em;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Xumf_VFlCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+|
+
 The diagram below explains the application routes.
 
 .. image:: ../pictures/module1/arcadia-routes.png
    :align: center
-   :scale: 20%
+   :scale: 15%
 
+|
 
 Step 1 - DevOps deploy Arcadia application
 ******************************************
@@ -39,8 +50,7 @@ Tasks:
 
 .. warning :: At this stage, the first part of the application is published and can be accessed and demonstrated. We can Money Transfert is not yet there, same for Refer Friends.
 
-
-
+|
 
 Step 2 - DevOps deploy Money Transfer application
 *************************************************
@@ -61,6 +71,7 @@ Tasks:
 
 .. warning :: At this stage, the Money Transfert application is published and can be accessed and demonstrated
 
+|
 
 Step 3 - DevOps deploy Refer Friends application
 ************************************************
@@ -80,6 +91,8 @@ Tasks:
    :scale: 20%
 
 .. warning :: At this stage, the Refer Friends application is published and can be accessed and demonstrated. The Arcadia Bank website is finished, but not yet secured.
+
+|
 
 Step 4 - NetOps/SecOps publish WAF policy to protect Arcadia application
 ************************************************************************
